@@ -1,15 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
     display: grid;
     place-items: center;
     background-color: burlywood;
 }
-#container{
+
+#container {
     position: relative;
     /* height: max-content; */
     height: 90%;
@@ -18,12 +20,13 @@ body{
     aspect-ratio: 0.6;
     background-color: white;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
-  
 
-#top{
+
+#top {
     position: sticky;
     top: -3.5rem;
     height: 7rem;
@@ -35,20 +38,24 @@ body{
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: sans-serif;
 }
-#top_main{
+
+#top_main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 0.9rem;
     font-size: 1.2em;
 }
-#company{
+
+#company {
     pointer-events: none;
 }
-#tools{
+
+#tools {
     display: flex;
 }
-#search, #alltools{
+
+#search, #alltools {
     cursor: pointer;
     width: 2rem;
     display: grid;
@@ -57,10 +64,12 @@ body{
     border-radius: 50%;
     /* border: 1px solid white; */
 }
-#search{
+
+#search {
     margin: 0 0.5rem;
 }
-#top_bottom{
+
+#top_bottom {
     width: 100%;
     display: grid;
     grid-template-columns: 3rem 1fr;
@@ -69,7 +78,8 @@ body{
     bottom: 0;
     /* border: 1px solid white; */
 }
-#camera{
+
+#camera {
     height: 2rem;
     display: flex;
     justify-content: center;
@@ -78,14 +88,16 @@ body{
     /* aspect-ratio: 1.4; */
     /* border: 1px solid white; */
 }
-#camera img{
+
+#camera img {
     color: rgba(255, 255, 255, 0.5);
     opacity: 0.4;
     filter: invert(100%);
     /* width: 70%; */
     height: 50%;
 }
-#buttons{
+
+#buttons {
     /* width: 100vw; */
     position: relative;
     /* border: 1px solid white; */
@@ -94,7 +106,8 @@ body{
     font-size: 0.75em;
     text-transform: uppercase;
 }
-.buttons_items{
+
+.buttons_items {
     width: 33%;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
@@ -103,10 +116,12 @@ body{
     justify-content: center;
     /* border: 1px solid white; */
 }
-.active{
+
+.active {
     color: white;
 }
-#buttons span{
+
+#buttons span {
     width: 33%;
     height: 4px;
     background-color: white;
@@ -118,7 +133,7 @@ body{
 }
 
 
-#options{
+#options {
     position: absolute;
     top: 0;
     right: 0;
@@ -130,12 +145,14 @@ body{
     width: 12rem;
     font-family: sans-serif;
 }
-#options ul{
+
+#options ul {
     width: 100%;
     list-style: none;
     /* border: 1px solid red; */
 }
-#options ul li a{
+
+#options ul li a {
     text-decoration: none;
     padding: 0.8rem 1rem;
     display: block;
@@ -145,16 +162,38 @@ body{
     color: black;
 }
 
-.chatlist{
+#main_section {
     position: relative;
     height: calc(100% - 7rem);
+    display: flex;
+    width: 300%;
+    left: 0%;
+    transition: 0.5s;
+}
+
+.chatlist {
+    position: relative;
     font-family: sans-serif;
+    width: 100%;
     /* overflow-y: scroll; */
 }
+
+.statuslist {
+    height: 200%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.callslist {
+    height: 200%;
+    width: 100%;
+    background-color: tomato;
+}
+
 /* .chatlist::-webkit-scrollbar {
     display: none;
   } */
-.chatlist .block{
+.chatlist .block {
     position: relative;
     width: 100%;
     text-decoration: none;
@@ -164,13 +203,16 @@ body{
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
 }
-.chatlist .block.unread .details .listhead .time{
+
+.chatlist .block.unread .details .listhead .time {
     color: rgb(0, 172, 72);
 }
-.chatlist .block:hover{
+
+.chatlist .block:hover {
     background: rgba(0, 0, 0, 0.1);
 }
-.chatlist .block .imgbx{
+
+.chatlist .block .imgbx {
     position: relative;
     width: 55px;
     height: 45px;
@@ -179,22 +221,26 @@ body{
     margin-right: 15px;
     /* border: 2px solid red; */
 }
-.chatlist .block .imgbx img{
+
+.chatlist .block .imgbx img {
     width: 100%;
     height: 100%;
 }
-.chatlist .block .details{
+
+.chatlist .block .details {
     position: relative;
     width: 100%;
 }
-.chatlist .block .details .listhead{
+
+.chatlist .block .details .listhead {
     display: flex;
     justify-content: space-between;
 }
-.chatlist .block .details .listhead h4{
+
+.chatlist .block .details .listhead h4 {
     font-size: 1em;
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    
+
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -202,19 +248,22 @@ body{
     font-weight: 600;
     color: #111;
 }
-.chatlist .block .details .listhead .time{
+
+.chatlist .block .details .listhead .time {
     font-size: 0.8rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 }
-.chatlist .block .details .messages_p{
+
+.chatlist .block .details .messages_p {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.messages_p p{
+
+.messages_p p {
     color: rgba(0, 0, 0, 0.8);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     font-size: 0.8rem;
@@ -224,7 +273,8 @@ body{
     text-overflow: ellipsis;
     /* border: 2px solid red; */
 }
-.messages_p b{
+
+.messages_p b {
     color: white;
     font-weight: bold;
     background: rgb(0, 172, 72);
@@ -237,22 +287,25 @@ body{
     justify-content: center;
     align-items: center;
 }
-.seen{
+
+.seen {
     position: relative;
     margin-left: 2px;
     color: rgb(0, 174, 255);
 }
-.seen span{
+
+.seen span {
     color: rgb(0, 174, 255);
     transform: rotate(-8deg);
 }
-.seen span:nth-child(2){
+
+.seen span:nth-child(2) {
     position: absolute;
     /* top: 0; */
     left: 4.5px;
 }
 
-#message{
+#message {
     height: 3.5rem;
     display: grid;
     place-items: center;
@@ -265,28 +318,35 @@ body{
     bottom: 1rem;
     right: 1rem;
 }
-
+#message img{
+    width: 40%;
+    filter: invert(100%);
+    transition: 0.5s;
+}
 
 
 @media screen and (max-width: 500px) {
-    #container{
+    #container {
         height: 100vh;
         /* height: max-content; */
         width: 100vw;
     }
-    #top{
+
+    #top {
         height: 7rem;
-        
+
     }
 }
+
 @media screen and (max-width: 400px) {
-    #top{
+    #top {
         /* height: 18vh; */
         font-size: 1rem;
     }
 }
+
 @media screen and (max-width: 300px) {
-    #top{
+    #top {
         height: 6.5rem;
         font-size: 0.8rem;
     }
