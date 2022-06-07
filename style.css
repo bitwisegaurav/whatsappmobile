@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     overflow-y: scroll;
     aspect-ratio: 0.6;
     background-color: white;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -29,11 +31,11 @@ body {
 #top {
     position: sticky;
     top: -3.5rem;
-    height: 7rem;
+    height: 6.5rem;
     font-size: 1.1rem;
     z-index: 1;
     background-color: rgb(3, 145, 90);
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     color: white;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: sans-serif;
@@ -240,7 +242,7 @@ body {
 .chatlist .block .details .listhead h4 {
     font-size: 1em;
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-
+    margin-bottom: 3px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -250,7 +252,7 @@ body {
 }
 
 .chatlist .block .details .listhead .time {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 }
