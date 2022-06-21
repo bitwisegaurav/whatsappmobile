@@ -64,11 +64,19 @@ body {
     place-items: center;
     aspect-ratio: 1;
     border-radius: 50%;
-    /* border: 1px solid white; */
+    /* border: 1px solid red; */
 }
 
 #search {
     margin: 0 0.5rem;
+}
+#search img{
+    width: 60%;
+    filter: invert(100%);
+}
+#alltools img{
+    width: 15%;
+    filter: invert(100%);
 }
 
 #top_bottom {
@@ -130,7 +138,7 @@ body {
     position: absolute;
     bottom: 1%;
     left: 0%;
-    transition: 0.5s;
+    transition: 0.2s;
     box-shadow: 0 0px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -170,7 +178,7 @@ body {
     display: flex;
     width: 300%;
     left: 0%;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .chatlist {
@@ -201,7 +209,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 0.7rem 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
 }
@@ -222,6 +230,15 @@ body {
     border-radius: 50%;
     margin-right: 15px;
     /* border: 2px solid red; */
+}
+
+.imgclicked{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .chatlist .block .imgbx img {
@@ -268,7 +285,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 100;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -293,15 +310,30 @@ body {
 .seen {
     position: relative;
     margin-left: 2px;
+    /* width: 5rem; */
+    /* border: 2px solid red; */
     color: rgb(0, 174, 255);
 }
 
-.seen span {
+/* .seen span {
     color: rgb(0, 174, 255);
     transform: rotate(-8deg);
 }
 
 .seen span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 4.5px;
+} */
+.seen img {
+    width: 1rem;
+    /* border: 2px solid red; */
+    /* color: rgb(0, 174, 255); */
+    /* filter: blur(5px) brightness(0.4) contrast(200%) drop-shadow(16px 16px 20px blue) grayscale(50%) hue-rotate(90deg) invert(75%) opacity(25%) saturate(30%) sepia(60%); */
+    
+}
+
+.seen img:nth-child(2) {
     position: absolute;
     /* top: 0; */
     left: 4.5px;
@@ -319,8 +351,10 @@ body {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+    transition: 0.2s;
 }
 #message img{
+    /* height: 40%; */
     width: 40%;
     filter: invert(100%);
     transition: 0.5s;

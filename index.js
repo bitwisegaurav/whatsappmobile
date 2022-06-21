@@ -6,6 +6,7 @@ let alltools = document.getElementById("alltools");
 let options = document.getElementById("options");
 let mainSection = document.getElementById("main_section");
 let message = document.getElementById("message");
+let imgbox = document.getElementsByClassName("imgbox");
 
 
 // changing sections
@@ -15,7 +16,7 @@ chatsbtn.addEventListener("click", () => {
     chatsbtn.classList.add("active");
     span.style.left = "0%";
     mainSection.style.left = "0%";
-    message.innerHTML = `<span class="material-symbols-outlined">chat</span>`;
+    message.innerHTML = `<img src="message.svg" alt="msg">`;
 })
 statusbtn.addEventListener("click", () => {
     callsbtn.classList.remove("active");
@@ -31,10 +32,10 @@ callsbtn.addEventListener("click", () => {
     callsbtn.classList.add("active");
     span.style.left = "67%";
     mainSection.style.left = "-200%";
-    message.innerHTML = `<span class="material-symbols-rounded">add_call</span>`;
+    message.innerHTML = `<img src="add_call.png" alt="">`;
 })
 
-
+// Setting Options
 alltools.addEventListener("click", () => {
     if (options.style.display == "none") {
         options.style.display = "flex";
@@ -49,3 +50,21 @@ document.addEventListener("click", (e) => {
     //     options.style.display = "none";
     // }
 })
+
+// Image Clicking events
+// imgbox.forEach(item => {
+//     item.addEventListener('click', event => {
+//       imgbox[item].className = "imgclicked";
+//     })
+//   })
+
+for (let i = 0; i < imgbox.length; i++) {
+    imgbox[i].onclick = function () {
+        let j = 0;
+        // while (j < imgbox.length) {
+        //     topic[j++].classList.remove('imgclicked');
+        // }
+        // imgbox[i].classList.add("imgclicked");
+        imgbox[i].
+    }  
+}

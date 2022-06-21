@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -22,29 +23,13 @@
             background: rgb(228, 224, 191);
             scroll-behavior: smooth;
         }
-        /* width */
+        /* Scrollbar */
         ::-webkit-scrollbar {
-            width: 0.7rem;
+            display: none;
         }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #bbb;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgb(136, 131, 131);
-        }
-
         /* Navbar */
         nav {
-            position: sticky;
+            position: fixed;
             top: 0;
             width: 100%;
             background: white;
@@ -52,8 +37,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* height: 60px; */
+            height: 70px;
             padding: 10px 16px;
+            color: white;
         }
         nav::before{
             content: '';
@@ -63,7 +49,8 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: rgba(43, 226, 113, 0.1);
+            /* background: rgba(4, 71, 30, 0.7); */
+            background: rgb(3, 109, 82);
         }
 
         nav .name {
@@ -103,12 +90,54 @@
             font-size: 12px;
             opacity: 0.7;
         }
-
-        nav .logos span {
-            padding: 8px;
-            /* margin: 0 0; */
-            color: rgba(0, 0, 0, 0.6);
+        nav .logos{
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            /* border: 2px solid red; */
+        }
+        nav .logos .videocall, .more_options, .call{
+            /* padding: 8px; */
+            width: 2.6rem;
+            height: 2.6rem;
+            position: relative;
+            display: grid;
+            place-items: center;
+            /* width: 2rem; */
             border-radius: 50%;
+            /* margin: 0 0.3rem; */
+            /* border: 2px solid red; */
+        }
+        nav .logos .videocall{
+            margin-right: 0.5rem;
+        }
+        nav .logos .videocall img{
+            width: 1.3rem;
+        }
+        nav .logos .call img{
+            width: 1rem;
+            opacity: 0.85;
+        }
+        nav .logos .more_options img{
+            /* width: 16%; */
+            width: 0.25rem;
+            opacity: 0.9;
+        }
+        nav .logos img {
+            filter: invert(100%);
+            /* margin: 0 0; */
+            /* color: rgba(0, 0, 0, 0.6); */
+            /* border-radius: 50%; */
+            /* border: 2px solid; */
+        }
+        nav .logos .videocall:hover{
+            background: rgba(255, 255, 255, 0.15);
+        }
+        nav .logos .call:hover{
+            background: rgba(255, 255, 255, 0.15);
+        }
+        nav .logos .more_options:hover{
+            background: rgba(255, 255, 255, 0.15);
         }
 
         span:active,
@@ -120,28 +149,83 @@
         .bottom {
             position: fixed;
             bottom: 0;
+            display: flex;
+            justify-content: space-between;
             z-index: 99999;
-            background-color: white;
+            background-color: rgb(228, 224, 191);
             width: 100%;
+            padding: 5px 2px;
+            /* border: 2px solid red; */
         }
-
+        .bottom .mic{
+            width: 42px;
+            height: 42px;
+            display: flex;
+            border: 2px solid green;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgb(3, 109, 82);
+            /* width: 30%; */
+        }
+        .bottom .mic img{
+            width: 50%;
+            filter: invert(100%);
+        }
         .buttons {
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 44px;
-            padding: 0px 16px;
+            /* justify-content: space-between; */
+            height: 45px;
+            width: calc(100% - 40px);
+            width: calc(100% - 48px);
+            padding: 0px 6px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 44px;
             /* width: 100%; */
         }
-
+        .buttons .smile{
+            width: 3rem;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            /* border: 2px solid red; */
+        }
+        .buttons .smile img{
+            width: 80%;
+            opacity: 0.6;
+        }
+        .buttons .attach, .payment , .camera{
+            width: 3rem;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            margin: 0 5px;
+            /* border: 2px solid red; */
+        }
+        .buttons .attach img, .payment img, .camera img{
+            width: 70%;
+            opacity: 0.6;
+        }
+        .buttons .attach img{
+            width: 70%;
+            transform: rotate(-40deg);
+        }
+        .buttons .payment img{
+            filter: grayscale(100%) contrast(80%);
+            opacity: 1;
+        }
         .buttons input {
             margin-right: 10px;
-            height: 44px;
+            height: 35px;
             width: 100%;
             border: none;
             outline: none;
             font-size: 17px;
-            padding: 0px 15px;
+            padding: 0px 5px;
+            /* border: 2px solid red; */
         }
 
         .mar-rig {
@@ -162,6 +246,7 @@
         /* Center Section */
         .container{
             padding-bottom: 3rem;
+            padding-top: 70px;
         }
         .container .rightside{
             margin: 10px 22px;
@@ -265,6 +350,14 @@
             /* top: 0; */
             left: 4.5px;
         }
+        .seen img {
+            width: 1rem;
+        }
+
+        .seen img:nth-child(2) {
+            position: absolute;
+            left: 4.5px;
+        }
 
 
     </style>
@@ -283,8 +376,17 @@
             </div>
         </div>
         <div class="logos">
-            <span class="material-symbols-outlined">search</span>
-            <span class="material-symbols-outlined">more_vert</span>
+            <!-- <span class="material-symbols-outlined">search</span> -->
+            <!-- <span class="material-symbols-outlined">more_vert</span> -->
+            <div class="videocall">
+                <img src="../Video-call-02.png" alt="search">
+            </div>
+            <div class="call">
+                <img src="../Call-03.png" alt="search">
+            </div>
+            <div class="more_options">
+                <img src="../more_options.png" alt="search">
+            </div>
         </div>
     </nav>
 
@@ -306,9 +408,12 @@
                 <div class="msg">Hi</div>
                 <div class="msginfo">
                     <div class="time">9:39 am</div>
-                    <div class="tick"></div><div class="seen">
-                        <span class="material-symbols-outlined">done</span>
-                        <span class="material-symbols-outlined">done</span>
+                    <!-- <div class="tick"></div> -->
+                    <div class="seen">
+                        <!-- <span class="material-symbols-outlined">done</span>
+                        <span class="material-symbols-outlined">done</span> -->
+                        <img src="../done.png" alt="done">
+                        <img src="../done.png" alt="done">
                     </div>
                 </div>
             </div>
@@ -330,8 +435,8 @@
                 <div class="msginfo">
                     <div class="time">1:05 pm</div>
                     <div class="seen">
-                        <span class="material-symbols-outlined">done</span>
-                        <span class="material-symbols-outlined">done</span>
+                        <img src="../done.png" alt="done">
+                        <img src="../done.png" alt="done">
                     </div>
                 </div>
             </div>
@@ -340,8 +445,8 @@
                 <div class="msginfo">
                     <div class="time">1:06 pm</div>
                     <div class="seen">
-                        <span class="material-symbols-outlined">done</span>
-                        <span class="material-symbols-outlined">done</span>
+                        <img src="../done.png" alt="done">
+                        <img src="../done.png" alt="done">
                     </div>
                 </div>
             </div>
@@ -362,8 +467,8 @@
                 <div class="msginfo">
                     <div class="time">5:19 pm</div>
                     <div class="seen">
-                        <span class="material-symbols-outlined">done</span>
-                        <span class="material-symbols-outlined">done</span>
+                        <img src="../done.png" alt="done">
+                        <img src="../done.png" alt="done">
                     </div>
                 </div>
             </div>
@@ -386,8 +491,8 @@
                 <div class="msginfo">
                     <div class="time">3:00 am</div>
                     <div class="seen">
-                        <span class="material-symbols-outlined">done</span>
-                        <span class="material-symbols-outlined">done</span>
+                        <img src="../done.png" alt="done">
+                        <img src="../done.png" alt="done">
                     </div>
                 </div>
             </div>
@@ -399,10 +504,29 @@
     <!-- Bottom container -->
     <div class="bottom">
         <div class="buttons">
-            <span class="material-symbols-rounded mar-rig">mood</span>
-            <i class="fa-solid fa-paperclip mar-rig"></i>
+            <!-- <span class="material-symbols-rounded mar-rig">mood</span> -->
+            <div class="smile">
+                <img src="../smile-icon-png.jpg" alt="">
+            </div>
             <input type="text" name="searchbox" placeholder="Type a message">
-            <span class="material-symbols-rounded">mic</span>
+            <!-- <i class="fa-solid fa-paperclip mar-rig"></i> -->
+            <div class="attach">
+                <!-- <imgc src="../attach.png" alt=""> -->
+                <img src="../attach.png" alt="">
+            </div>
+            <div class="payment">
+                <!-- <imgc src="../attach.png" alt=""> -->
+                <img src="../payment.png" alt="">
+            </div>
+            <div class="camera">
+                <!-- <imgc src="../attach.png" alt=""> -->
+                <img src="../camera.png" alt="">
+            </div>
+
+        </div>
+        <!-- <span class="material-symbols-rounded" id="mic">mic</span> -->
+        <div class="mic">
+            <img src="../Mic-05.png" alt="" id="mic">
         </div>
     </div>
 </body>
@@ -410,7 +534,11 @@
     setTimeout(() => {
         document.getElementById('lastseen').style.display = "none";
     }, 10000);
+
+    window.addEventListener("load", () => {
+        window.scroll(0,window.innerHeight);
+    })
 </script>
-<script src="https://kit.fontawesome.com/111b1c1bf6.js" crossorigin="anonymous"></script>
+<!-- <script src="https://kit.fontawesome.com/111b1c1bf6.js" crossorigin="anonymous"></script> -->
 
 </html>
