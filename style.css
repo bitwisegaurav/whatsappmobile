@@ -287,7 +287,6 @@ body {
     -webkit-line-clamp: 1;
     font-size: 0.9rem;
     -webkit-box-orient: vertical;
-    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     /* border: 2px solid red; */
