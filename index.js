@@ -58,13 +58,12 @@ document.addEventListener("click", (e) => {
 //     })
 //   })
 
-for (let i = 0; i < imgbox.length; i++) {
-    imgbox[i].onclick = function () {
-        let j = 0;
-        // while (j < imgbox.length) {
-        //     topic[j++].classList.remove('imgclicked');
-        // }
-        // imgbox[i].classList.add("imgclicked");
-        imgbox[i].
-    }  
-}
+// for (let i = 0; i < imgbox.length; i++) {
+//     imgbox[i].onclick = function () {
+//         let j = 0;
+//         // while (j < imgbox.length) {
+//         //     topic[j++].classList.remove('imgclicked');
+//         // }
+//         // imgbox[i].classList.add("imgclicked");
+//     }  
+// }
