@@ -281,7 +281,7 @@ body {
 }
 
 .messages_p p {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgb(114, 114, 114);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: -webkit-box;
     -webkit-line-clamp: 1;
