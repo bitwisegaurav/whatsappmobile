@@ -286,8 +286,8 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     font-size: 0.9rem;
-    font-weight: 100;
     -webkit-box-orient: vertical;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     /* border: 2px solid red; */
@@ -301,7 +301,6 @@ body {
     height: 1.5rem;
     border-radius: 50%;
     display: flex;
-    font-weight: 100;
     font-size: 0.8rem;
     justify-content: center;
     align-items: center;
