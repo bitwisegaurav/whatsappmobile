@@ -379,9 +379,14 @@ body {
 
 @media screen and (max-width: 400px) {
     #top {
-        /* height: 18vh; */
+        height: 6rem;
         font-size: 1rem;
     }
+    
+    #search, #alltools {
+        width: 1.8rem;
+    }
+
     .messages_p p{
         font-size: 0.8rem;
     }
@@ -400,8 +405,11 @@ body {
 
 @media screen and (max-width: 300px) {
     #top {
-        height: 6.5rem;
+        height: 5.5rem;
         font-size: 0.8rem;
+    }
+    #search, #alltools {
+        width: 1.4rem;
     }
     .messages_p p{
         font-size: 0.7rem;
