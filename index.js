@@ -16,7 +16,7 @@ chatsbtn.addEventListener("click", () => {
     chatsbtn.classList.add("active");
     span.style.left = "0%";
     mainSection.style.left = "0%";
-    message.innerHTML = `<img src="message.svg" alt="msg">`;
+    message.innerHTML = `<img src="icons/message.svg" alt="msg">`;
 })
 statusbtn.addEventListener("click", () => {
     callsbtn.classList.remove("active");
@@ -24,7 +24,7 @@ statusbtn.addEventListener("click", () => {
     statusbtn.classList.add("active");
     span.style.left = "33%";
     mainSection.style.left = "-100%";
-    message.innerHTML = `<img src="camera.png" alt="camera">`;
+    message.innerHTML = `<img src="icons/camera.png" alt="camera">`;
 })
 callsbtn.addEventListener("click", () => {
     statusbtn.classList.remove("active");
@@ -32,7 +32,7 @@ callsbtn.addEventListener("click", () => {
     callsbtn.classList.add("active");
     span.style.left = "67%";
     mainSection.style.left = "-200%";
-    message.innerHTML = `<img src="add_call.png" alt="">`;
+    message.innerHTML = `<img src="icons/add_call.png" alt="">`;
 })
 
 // Setting Options

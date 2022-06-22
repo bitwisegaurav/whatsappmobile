@@ -30,7 +30,7 @@ body {
 
 #top {
     position: sticky;
-    top: -3.5rem;
+    top: -4rem;
     height: 6.5rem;
     font-size: 1.1rem;
     z-index: 1;
@@ -47,6 +47,7 @@ body {
     justify-content: space-between;
     padding: 0 0.9rem;
     font-size: 1.2em;
+    /* border: 2px solid red; */
 }
 
 #company {
@@ -82,7 +83,8 @@ body {
 #top_bottom {
     width: 100%;
     display: grid;
-    grid-template-columns: 3rem 1fr;
+    height: 3rem;
+    grid-template-columns: 2.5rem 1fr;
     position: absolute;
     font-weight: bold;
     bottom: 0;
@@ -90,10 +92,11 @@ body {
 }
 
 #camera {
-    height: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
+    height: 100%;
     /* margin-bottom: 4px; */
     /* aspect-ratio: 1.4; */
     /* border: 1px solid white; */
@@ -104,15 +107,17 @@ body {
     opacity: 0.4;
     filter: invert(100%);
     /* width: 70%; */
-    height: 50%;
+    height: 1rem;
 }
 
 #buttons {
     /* width: 100vw; */
+    height: 100%;
     position: relative;
     /* border: 1px solid white; */
     display: flex;
-    height: 2rem;
+    align-items: center;
+    /* height: 2rem; */
     font-size: 0.75em;
     text-transform: uppercase;
 }
@@ -133,7 +138,7 @@ body {
 
 #buttons span {
     width: 33%;
-    height: 4px;
+    height: 3px;
     background-color: white;
     position: absolute;
     bottom: 1%;
@@ -177,7 +182,7 @@ body {
     height: calc(100% - 7rem);
     display: flex;
     width: 300%;
-    left: 0%;
+    /* left: 0%; */
     transition: 0.2s;
 }
 
@@ -185,7 +190,6 @@ body {
     position: relative;
     font-family: sans-serif;
     width: 100%;
-    /* overflow-y: scroll; */
 }
 
 .statuslist {
@@ -295,7 +299,7 @@ body {
 .messages_p b {
     color: white;
     font-weight: bold;
-    background: rgb(0, 172, 72);
+    background: rgb(5, 184, 115);
     min-width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -370,7 +374,6 @@ body {
 
     #top {
         height: 7rem;
-
     }
 }
 
@@ -379,11 +382,39 @@ body {
         /* height: 18vh; */
         font-size: 1rem;
     }
+    .messages_p p{
+        font-size: 0.8rem;
+    }
+    .messages_p b{
+        font-size: 0.7rem;
+        min-width: 1.3rem;
+        height: 1.3rem;
+    }
+    .chatlist .block .details .listhead h4 {
+        font-size: 0.9rem;
+    }
+    #message{
+        height: 3.2rem;
+    }
 }
 
 @media screen and (max-width: 300px) {
     #top {
         height: 6.5rem;
         font-size: 0.8rem;
+    }
+    .messages_p p{
+        font-size: 0.7rem;
+    }
+    .messages_p b{
+        font-size: 0.65rem;
+        min-width: 1.2rem;
+        height: 1.2rem;
+    }
+    .chatlist .block .details .listhead h4 {
+        font-size: 0.75rem;
+    }
+    #message{
+        height: 3rem;
     }
 }
