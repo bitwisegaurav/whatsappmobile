@@ -30,7 +30,7 @@ body {
 
 #top {
     position: sticky;
-    top: -4rem;
+    top: -3.5rem;
     height: 6.5rem;
     font-size: 1.1rem;
     z-index: 1;
@@ -56,6 +56,7 @@ body {
 
 #tools {
     display: flex;
+    /* border: 1px solid red; */
 }
 
 #search, #alltools {
@@ -182,10 +183,11 @@ body {
 
 #main_section {
     position: relative;
-    height: calc(100% - 7rem);
+    /* height: calc(100% - 7rem); */
     display: flex;
     width: 300%;
     /* left: 0%; */
+    scroll-behavior: smooth;
     transition: 0.2s;
 }
 
@@ -193,16 +195,18 @@ body {
     position: relative;
     font-family: sans-serif;
     width: 100%;
+    /* border: 1px solid red; */
+    margin-bottom: 5rem;
 }
 
 .statuslist {
-    height: 200%;
+    height: 100vh;
     width: 100%;
     background-color: blueviolet;
 }
 
 .callslist {
-    height: 200%;
+    height: 100vh;
     width: 100%;
     background-color: tomato;
 }
@@ -377,7 +381,7 @@ body {
     }
 
     #top {
-        height: 7rem;
+        height: 6.5rem;
     }
 }
 
@@ -385,8 +389,8 @@ body {
     #top {
         height: 6rem;
         font-size: 1rem;
+        top: -3rem;
     }
-    
     #search, #alltools {
         width: 1.8rem;
     }
@@ -411,6 +415,10 @@ body {
     #top {
         height: 5.5rem;
         font-size: 0.8rem;
+        top: -3rem;
+    }
+    #top_bottom{
+        height: 2.5rem;
     }
     #search, #alltools {
         width: 1.4rem;

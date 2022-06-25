@@ -36,18 +36,20 @@ callsbtn.addEventListener("click", () => {
 })
 
 // Setting Options
-alltools.addEventListener("mouseover", () => {
-    if (options.style.display == "none") {
-        options.style.display = "flex";
-    }
-    else{
-        options.style.display = "none";
-    }
+alltools.addEventListener("click", () => {
+    // if (options.style.display == "none") {
+    //     options.style.display = "flex";
+    //     options.style.background = "white";
+    // }
+    // else{
+    //     options.style.display = "none";
+    // }
+    options.style.display = "flex";
 })
 
 
 document.addEventListener("click", (event) => {
-    if ((event.target.id !== "options") || (event.target.id !== "alltools") && (options.style.display == "flex")) {
+    if ((event.target.id !== "options") && (event.target.id !== "alltools")) {
         options.style.display = "none";
         // options.style.background = "teal";
     }
@@ -69,3 +71,7 @@ document.addEventListener("click", (event) => {
 //         // imgbox[i].classList.add("imgclicked");
 //     }  
 // }
+
+document.addEventListener("click", (Event)=>{
+    console.log(Event.target.id);
+})
