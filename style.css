@@ -149,7 +149,7 @@ body {
 
 
 #options {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 9;
@@ -175,6 +175,9 @@ body {
     font-size: 0.8em;
     /* border: 1px solid red; */
     color: black;
+}
+#options ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 #main_section {

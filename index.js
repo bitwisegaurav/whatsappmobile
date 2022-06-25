@@ -36,7 +36,7 @@ callsbtn.addEventListener("click", () => {
 })
 
 // Setting Options
-alltools.addEventListener("click", () => {
+alltools.addEventListener("mouseover", () => {
     if (options.style.display == "none") {
         options.style.display = "flex";
     }
@@ -45,10 +45,12 @@ alltools.addEventListener("click", () => {
     }
 })
 
-document.addEventListener("click", (e) => {
-    // if ((e.target.id !== "options") || (e.target.id !== "alltools")) {
-    //     options.style.display = "none";
-    // }
+
+document.addEventListener("click", (event) => {
+    if ((event.target.id !== "options") || (event.target.id !== "alltools") && (options.style.display == "flex")) {
+        options.style.display = "none";
+        // options.style.background = "teal";
+    }
 })
 
 // Image Clicking events
