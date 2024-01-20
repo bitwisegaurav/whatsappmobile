@@ -75,3 +75,33 @@ document.addEventListener("click", (event) => {
 document.addEventListener("click", (Event)=>{
     console.log(Event.target.id);
 })
+
+function getUsersData(data) {
+    let content = ``;
+
+    data.forEach(user => {
+        content += `<a href="${user.href !== "#" ? `chats/${user.href}` : user.href}" class="block ${user.unread ? "unread" : ""}">
+        <div class="imgbx">
+            <img src="${user.img}" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4 class="name">${user.name}</h4>
+                <p class="time">${user.time}</p>
+            </div>
+            <div class="messages_p">
+                <p>Aur pher</p>
+                ${user.seen ? `<div class="seen">
+                <!-- <span class="material-symbols-rounded">done</span>
+                <span class="material-symbols-rounded">done</span> -->
+                <img src="icons/done.png" alt="">
+                <img src="icons/done.png" alt="">
+            </div>` : ""}
+                ${user.msgCount ? `<b>${user.msgCount}</b>` : ""}
+            </div>
+        </div>
+    </a>`
+    });
+
+    return content;
+}
